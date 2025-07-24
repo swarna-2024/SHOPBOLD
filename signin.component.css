@@ -1,0 +1,92 @@
+.signin-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.left-panel {
+  flex: 1;
+  background-color: #faf3e9; /* soft neutral background */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.logo {
+  width: 400px;
+  margin-bottom: 80px;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #faf3e9; /* same as sign-up page */
+  position: relative;
+}
+
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+form h2 {
+  margin-bottom: 20px;
+  color: #1a276b; /* orange heading like sign-up */
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff6f00; /* solid orange button */
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e65c00;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+#new {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 10px;
+  color: #555;
+  font-weight: bold;
+}

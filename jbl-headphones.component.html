@@ -1,0 +1,42 @@
+<app-header></app-header>
+<div class="container mt-5 mb-5">
+  <div class="product-detail-card d-flex flex-wrap align-items-start">
+ 
+    <div class="image-section text-center">
+      <img [src]="product.image" alt="JBL Headphones" class="product-image mb-3">
+      <button class="btn btn-primary btn-lg add-to-cart-btn" (click)="addToCart()">Add to Cart</button>
+    </div>
+ 
+    <div class="description-section">
+      <h2 class="product-title">{{ product.name }}</h2>
+ 
+      <p class="rating">★★★★☆ <span class="rating-text">(4.2 | 9,874 Ratings & 2,800 Reviews)</span></p>
+ 
+      <div class="price-section">
+        <span class="current-price">₹{{ product.price }}</span>
+        <span class="original-price">₹2,699</span>
+        <span class="discount">59% off</span>
+      </div>
+ 
+      <h5 class="section-heading">Description</h5>
+      <p class="full-description" [innerHTML]="product.description"></p>
+ 
+      <ul class="feature-list">
+        <li><span class="bullet-icon">🎧</span> Over-ear wired design for all-day comfort</li>
+        <li><span class="bullet-icon">🔌</span> 3.5mm connector with universal compatibility</li>
+        <li><span class="bullet-icon">🎙️</span> Built-in mic for hands-free calling</li>
+        <li><span class="bullet-icon">🎶</span> Deep bass sound from JBL tuned drivers</li>
+        <li><span class="bullet-icon">🧵</span> Tangle-free durable cable</li>
+        <li><span class="bullet-icon">🎮</span> Great for gaming and multimedia</li>
+      </ul>
+    </div>
+ 
+  </div>
+</div>
+ 
+<footer class="cart-footer">
+  <div class="container text-center py-3">
+    <p>&copy; 2025 <strong>ShopBold</strong>. All rights reserved.</p>
+    <small>Secure payments | Fast delivery | Easy returns</small>
+  </div>
+</footer>

@@ -1,0 +1,88 @@
+<app-header></app-header>
+
+<div class="payment-container">
+  <h2>Checkout</h2>
+
+  <!-- Payment Method Selection -->
+  <div class="payment-method">
+    <label>
+      <input type="radio" [(ngModel)]="paymentMethod" value="card" /> Pay with Card
+    </label>
+    <label>
+      <input type="radio" [(ngModel)]="paymentMethod" value="cod" /> Cash on Delivery
+    </label>
+  </div>
+
+  <!-- Card Details -->
+  <div *ngIf="paymentMethod === 'card'" class="card-details">
+    <div class="input-group"><i class="fas fa-credit-card"></i><label>Card Number</label></div>
+    <div class="input-icon-wrapper">
+      <input type="text" [(ngModel)]="cardNumber" (input)="formatCardNumber()" #cardModel="ngModel" name="cardNumber" placeholder="XXXX XXXX XXXX XXXX" required maxlength="19" />
+    </div>
+    <div class="error" *ngIf="cardModel.touched && !isCardNumberValid()">Card number must be 16 digits.</div>
+
+    <div class="input-group"><i class="fas fa-user"></i><label>Name on Card</label></div>
+    <div class="input-icon-wrapper">
+      <input type="text" [(ngModel)]="cardHolder" #holderModel="ngModel" name="cardHolder" placeholder="Cardholder Name" />
+    </div>
+    <div class="error" *ngIf="holderModel.touched && !isCardHolderValid()">Name on card is required.</div>
+
+    <div class="input-group"><i class="fas fa-calendar-alt"></i><label>Expiry Date</label></div>
+    <div class="input-icon-wrapper">
+      <input type="text" [(ngModel)]="expiryDate" (input)="formatExpiryDate()" #expiryModel="ngModel" name="expiryDate" placeholder="MM/YY" required maxlength="5" />
+    </div>
+    <div class="error" *ngIf="expiryModel.touched && !isExpiryValid()">Format must be MM/YY.</div>
+
+    <div class="input-group"><i class="fas fa-lock"></i><label>CVV</label></div>
+    <div class="input-icon-wrapper">
+      <input type="text" [(ngModel)]="cvv" #cvvModel="ngModel" name="cvv" maxlength="3" placeholder="CVV" />
+    </div>
+    <div class="error" *ngIf="cvvModel.touched && !isCVVValid()">CVV must be 3 digits.</div>
+  </div>
+
+  <!-- Delivery Details -->
+  <div class="delivery-details">
+    <h3>Delivery Address</h3>
+
+    <div class="input-group"><i class="fas fa-user"></i><label>Full Name</label></div>
+    <div class="input-icon-wrapper">
+      <input type="text" [(ngModel)]="delivery.fullName" #nameModel="ngModel" name="fullName" />
+    </div>
+
+    <div class="input-group"><i class="fas fa-envelope"></i><label>Email</label></div>
+    <div class="input-icon-wrapper">
+      <input type="email" [(ngModel)]="delivery.email" #emailModel="ngModel" name="email" />
+    </div>
+    <div class="error" *ngIf="emailModel.touched && !isEmailValid()">Invalid email format.</div>
+
+    <div class="input-group"><i class="fas fa-phone"></i><label>Phone</label></div>
+    <div class="input-icon-wrapper">
+      <input type="text" [(ngModel)]="delivery.phone" #phoneModel="ngModel" name="phone" />
+    </div>
+    <div class="error" *ngIf="phoneModel.touched && !isPhoneValid()">Phone number must be 10 digits starting with 6-9.</div>
+
+    <div class="input-group"><i class="fas fa-road"></i><label>Street</label></div>
+    <div class="input-icon-wrapper">
+      <input type="text" [(ngModel)]="delivery.street" />
+    </div>
+
+    <div class="input-group"><i class="fas fa-city"></i><label>City</label></div>
+    <div class="input-icon-wrapper">
+      <input type="text" [(ngModel)]="delivery.city" />
+    </div>
+
+    <div class="input-group"><i class="fas fa-map"></i><label>State</label></div>
+    <div class="input-icon-wrapper">
+      <input type="text" [(ngModel)]="delivery.state" />
+    </div>
+
+    <div class="input-group"><i class="fas fa-mail-bulk"></i><label>Postal Code</label></div>
+    <div class="input-icon-wrapper">
+      <input type="text" [(ngModel)]="delivery.postalCode" #postalModel="ngModel" name="postalCode" />
+    </div>
+    <div class="error" *ngIf="postalModel.touched && !isPostalCodeValid()">Postal code must be a 6-digit number.</div>
+  </div>
+
+  <!-- Place Order Button -->
+  <button (click)="placeOrder()" [disabled]="!validateForm()">Place Order</button>
+</div>

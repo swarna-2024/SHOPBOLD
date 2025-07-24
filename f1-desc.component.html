@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="container mt-5 mb-5">
+  <div class="product-detail-card d-flex flex-wrap align-items-start">
+ 
+    <div class="image-section text-center">
+      <img [src]="product.image" alt="Furniture Image" class="product-image mb-3">
+ 
+      <p *ngIf="currentQuantity > 0" class="text-success">
+        Already in cart: {{ currentQuantity }} item(s)
+      </p>
+ 
+      <button class="btn btn-primary btn-lg add-to-cart-btn" (click)="addToCart()">Add to Cart</button>
+    </div>
+ 
+    <div class="description-section">
+      <h2 class="product-title">{{ product.name }}</h2>
+ 
+      <p class="rating">★★★★☆ <span class="rating-text">(4.6 | 12,345 Ratings & 3,210 Reviews)</span></p>
+ 
+      <div class="price-section">
+        <span class="current-price">₹{{ product.price }}</span>
+        <span class="original-price">₹7,999</span>
+        <span class="discount">38% off</span>
+      </div>
+ 
+      <h5 class="section-heading">Description</h5>
+      <p class="full-description">{{ product.description }}</p>
+ 
+      <ul class="feature-list">
+        <li><span class="bullet-icon">🪵</span> Frame Material: Engineered Wood</li>
+        <li><span class="bullet-icon">📏</span> W x H: 53 cm x 110 cm (1 ft 8 in x 3 ft 7 in)</li>
+        <li><span class="bullet-icon">🎨</span> Upholstery Type: Cushion</li>
+        <li><span class="bullet-icon">🛠️</span> DIY - Basic assembly to be done with simple tools by the customer, comes with instructions.</li>
+      </ul>
+    </div>
+ 
+  </div>
+</div>
+ 
+<footer class="cart-footer">
+  <div class="container text-center py-3">
+    <p>&copy; 2025 <strong>ShopBold</strong>. All rights reserved.</p>
+    <small>Secure payments | Fast delivery | Easy returns</small>
+  </div>
+</footer>
+ 

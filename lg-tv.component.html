@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="container mt-5 mb-5">
+  <div class="product-detail-card d-flex flex-wrap align-items-start">
+    <div class="image-section text-center">
+      <img [src]="product.image" alt="LG OLED TV" class="product-image mb-3">
+      <button class="btn btn-primary btn-lg add-to-cart-btn" (click)="addToCart()">Add to Cart</button>
+    </div>
+ 
+    <div class="description-section">
+      <h2 class="product-title">{{ product.name }}</h2>
+      <p class="rating">★★★★★ <span class="rating-text">(4.4 | 827 Ratings & 410 Reviews)</span></p>
+ 
+      <div class="price-section">
+        <span class="current-price">₹{{ product.price }}</span>
+        <span class="original-price">₹69,999</span>
+        <span class="discount">20% off</span>
+      </div>
+ 
+      <h5 class="section-heading">Description</h5>
+      <p class="full-description">{{ product.description }}</p>
+ 
+      <ul class="feature-list">
+        <li><span class="bullet-icon">📺</span> 48-inch OLED panel with self-lit pixels</li>
+        <li><span class="bullet-icon">🧠</span> α9 Gen6 AI Processor for 4K upscaling</li>
+        <li><span class="bullet-icon">🎵</span> Dolby Atmos surround audio</li>
+        <li><span class="bullet-icon">📡</span> WebOS smart interface with app store</li>
+        <li><span class="bullet-icon">🖼️</span> Ultra-slim design for modern homes</li>
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+<footer class="cart-footer">
+  <div class="container text-center py-3">
+    <p>&copy; 2025 <strong>ShopBold</strong>. All rights reserved.</p>
+    <small>Secure payments | Fast delivery | Easy returns</small>
+  </div>
+</footer>

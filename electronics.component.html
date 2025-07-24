@@ -1,0 +1,98 @@
+<app-header></app-header>
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-4 col-md-6 mb-4" *ngFor="let item of electronics">
+     
+ 
+      <div class="product-card">
+        <!-- Product Image -->
+        <img [src]="item.image" alt="{{ item.title }}">
+ 
+        <!-- Product Title -->
+        <h2>{{ item.title }}</h2>
+ 
+        <!-- Product Description -->
+        <!-- <p class="description">{{ item.description }}</p> -->
+ 
+        <!-- Rating and Reviews -->
+        <p class="rating">⭐ {{ item.rating }} out of 5 stars ({{ item.reviews }} reviews)</p>
+ 
+        <!-- Sales Info -->
+        <p class="sales">{{ item.sales }}+ bought in past month</p>
+ 
+        <!-- Deal Badge -->
+        <p class="deal" *ngIf="item.isDeal">🔥 Limited time deal</p>
+ 
+        <!-- Price Section -->
+        <p class="price">
+          <span class="current-price">₹{{ item.price }}</span>
+          <span class="mrp">M.R.P: ₹{{ item.mrp }}</span>
+          <span class="discount">({{ item.discount }}% off)</span>
+        </p>
+ 
+        <!-- Delivery Info -->
+        <p class="delivery">🚚 {{ item.delivery }}</p>
+ 
+        <!-- Action Button -->
+        <button
+*ngIf="item.title.includes('boAt Rockerz')"
+routerLink="/product1-description"
+class="buy-btn">
+View Product
+</button>
+<button
+  *ngIf="item.title.includes('NoiseTune H1 Wireless Headphones')"
+  routerLink="/noise-headphones"
+  class="buy-btn">
+  View Product
+</button>
+<button
+  *ngIf="item.title.includes('JBL BassBoost Wired Over-Ear Headphones')"
+  routerLink="/jbl-headphones"
+  class="buy-btn">
+  View Product
+</button>
+ 
+<button
+*ngIf="item.title.includes('Apple iPhone 14')"
+routerLink="/product2-description"
+class="buy-btn">
+View Product
+</button>
+<button
+  *ngIf="item.title.includes('Samsung Galaxy M35 5G')"
+  routerLink="/samsung"
+  class="buy-btn">
+  View Product
+</button>
+<button
+  *ngIf="item.title.includes('OnePlus Nord')"
+  routerLink="/oneplus"
+  class="buy-btn">
+  View Product
+</button>
+ 
+<button
+*ngIf="item.title.includes('Samsung 43')"
+routerLink="/product3-description"
+class="buy-btn">
+View Product
+</button>
+<button
+*ngIf="item.title.includes('Sony Bravia')"
+routerLink="/sony-tv"
+class="buy-btn">
+View Product
+</button>
+ 
+<button
+*ngIf="item.title.includes('LG OLED')"
+routerLink="/lg-tv"
+class="buy-btn">
+View Product
+</button>
+ 
+      </div>
+    </div>
+  </div>
+</div>

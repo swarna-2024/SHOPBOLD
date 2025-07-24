@@ -1,0 +1,136 @@
+body {
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+    font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+ 
+  .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+ 
+  .product-detail-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+ 
+  .image-section {
+    flex: 0 0 60%;
+    max-width: 300px;
+    margin-right: 20px;
+  }
+ 
+  .product-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+ 
+  .add-to-cart-btn {
+    margin-top: 15px;
+    width: 100%;
+  }
+ 
+  .description-section {
+    flex: 1;
+    min-width: 300px;
+  }
+ 
+  .product-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+ 
+  .rating {
+    font-size: 1rem;
+    color: #f39c12;
+    margin-bottom: 10px;
+  }
+ 
+  .rating-text {
+    font-size: 0.9rem;
+    color: #555;
+  }
+ 
+  .price-section {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+ 
+  .current-price {
+    color: #e91e63;
+    font-weight: bold;
+  }
+ 
+  .original-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-left: 10px;
+  }
+ 
+  .discount {
+    color: #28a745;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+ 
+  .section-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #2c3e50;
+  }
+ 
+  .full-description {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+ 
+  .feature-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+  }
+ 
+  .feature-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+ 
+  .bullet-icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #007bff;
+  }
+ 
+  .btn-primary {
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: white;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+ 
+  .btn-primary:hover {
+    background: linear-gradient(to right, #0056b3, #0099cc);
+    transform: scale(1.03);
+  }

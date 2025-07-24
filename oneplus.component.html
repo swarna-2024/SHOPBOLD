@@ -1,0 +1,51 @@
+<app-header></app-header>
+<div class="container mt-5 mb-5">
+  <div class="product-detail-card d-flex flex-wrap align-items-start">
+ 
+    <div class="image-section text-center">
+      <img [src]="product.image" alt="OnePlus Nord CE4 Lite Image" class="product-image mb-3">
+ 
+      <p *ngIf="currentQuantity > 0" class="text-success">
+        Already in cart: {{ currentQuantity }} item(s)
+      </p>
+ 
+      <button class="btn btn-primary btn-lg add-to-cart-btn" (click)="addToCart()">Add to Cart</button>
+    </div>
+ 
+    <div class="description-section">
+      <h2 class="product-title">{{ product.name }}</h2>
+ 
+      <p class="rating">★★★★☆ <span class="rating-text">(4.1 | 7,746 Ratings)</span></p>
+ 
+      <div class="price-section">
+        <span class="current-price">₹{{ product.price }}</span>
+        <span class="original-price">₹19,999</span>
+        <span class="discount">10% off</span>
+      </div>
+ 
+      <h5 class="section-heading">Description</h5>
+      <p class="full-description">
+        {{ product.description }}
+      </p>
+ 
+      <ul class="feature-list">
+        <li><span class="bullet-icon">🔋</span> 5500 mAh Battery & Reverse Charging</li>
+        <li><span class="bullet-icon">⚡</span> 80W SUPERVOOC Fast Charging</li>
+        <li><span class="bullet-icon">📷</span> 50MP Sony LYT-600 Camera with OIS</li>
+        <li><span class="bullet-icon">🧠</span> Battery Health Engine with AI</li>
+        <li><span class="bullet-icon">📱</span> 6.67" 120Hz AMOLED Display, 2,100 nits brightness</li>
+        <li><span class="bullet-icon">🔊</span> Dual Stereo Speakers with 300% volume boost</li>
+        <li><span class="bullet-icon">🖼️</span> AI Smart Cutout for photo editing</li>
+        <li><span class="bullet-icon">🔒</span> OxygenOS 14 with 2 major Android updates</li>
+      </ul>
+    </div>
+ 
+  </div>
+</div>
+ 
+<footer class="cart-footer">
+  <div class="container text-center py-3">
+    <p>&copy; 2025 <strong>ShopBold</strong>. All rights reserved.</p>
+    <small>Secure payments | Fast delivery | Easy returns</small>
+  </div>
+</footer>

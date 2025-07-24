@@ -1,0 +1,46 @@
+<app-header></app-header> 
+
+<div class="container mt-5 mb-5">
+  <div class="product-detail-card d-flex flex-wrap align-items-start">
+ 
+    <div class="image-section text-center">
+      <img [src]="product.image" alt="Product Image" class="product-image mb-3">
+ 
+      <p *ngIf="currentQuantity > 0" class="text-success">
+        Already in cart: {{ currentQuantity }} item(s)
+      </p>
+ 
+      <button class="btn btn-primary btn-lg add-to-cart-btn" (click)="addToCart()">Add to Cart</button>
+    </div>
+ 
+    <div class="description-section">
+      <h2 class="product-title">
+        boAt Rockerz 450 w/ 40mm Drivers, 15 HRS Playback, Soft Padded Earcups Bluetooth (Luscious Black, On the Ear)
+      </h2>
+ 
+      <p class="rating">★★★★☆ <span class="rating-text">(4.3 | 92,039 Ratings & 40,872 Reviews)</span></p>
+ 
+      <div class="price-section">
+        <span class="current-price">₹1,399</span>
+        <span class="original-price">₹3,990</span>
+        <span class="discount">64% off</span>
+      </div>
+ 
+      <h5 class="section-heading">Description</h5>
+      <p class="full-description">
+        Are you looking for a headset that features eye-catching aesthetics and dual modes? If yes, bring home the boAt Rockerz 450 that has an AUX-mode as well as the Bluetooth connectivity feature. The 40-mm drivers and adjustable earcups ensure you enjoy a comfortable listening experience that is immersive. With up to 15 hours of battery life, soft padded ear cushions, and easy-access controls, this headset is built for all-day comfort and convenience.
+      </p>
+ 
+      <ul class="feature-list">
+        <li><span class="bullet-icon">🎧</span> With Mic: Yes</li>
+        <li><span class="bullet-icon">🔌</span> Connector type: 3.5 mm</li>
+        <li><span class="bullet-icon">🔋</span> Battery life: 15 hr | Charging time: 3 Hours</li>
+        <li><span class="bullet-icon">🎶</span> 40mm dynamic drivers pump immersive HD audio</li>
+        <li><span class="bullet-icon">⏱️</span> Up to 15 hours of superior playback</li>
+        <li><span class="bullet-icon">🛏️</span> Ergonomic on-ear design with padded cushions</li>
+        <li><span class="bullet-icon">🎛️</span> Easy access music & call controls, voice assistant</li>
+      </ul>
+    </div>
+ 
+  </div>
+</div>

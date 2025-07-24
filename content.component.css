@@ -1,0 +1,33 @@
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right,#ffebcd, #2D2D2D);
+  color: white;
+}
+
+
+.products {
+  padding: 2rem;
+  text-align: center;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 300px;
+  
+}
+
+.carousel img {
+  height: 400px;
+  object-fit: cover;
+}

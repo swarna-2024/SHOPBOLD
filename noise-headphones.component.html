@@ -1,0 +1,47 @@
+<app-header></app-header>
+<div class="container mt-5 mb-5">
+  <div class="product-detail-card d-flex flex-wrap align-items-start">
+ 
+    <div class="image-section text-center">
+      <img [src]="product.image" alt="Noise Wireless Headphones" class="product-image mb-3">
+      <p *ngIf="currentQuantity > 0" class="text-success">
+        Already in cart: {{ currentQuantity }} item(s) <!-- ✅ NEW: Quantity display -->
+      </p>
+     
+      <button class="btn btn-primary btn-lg add-to-cart-btn" (click)="addToCart()">Add to Cart</button>
+    </div>
+ 
+    <div class="description-section">
+      <h2 class="product-title">{{ product.name }}</h2>
+ 
+      <p class="rating">★★★★☆ <span class="rating-text">(4.5 | 15,234 Ratings & 8,200 Reviews)</span></p>
+ 
+      <div class="price-section">
+        <span class="current-price">₹{{ product.price }}</span>
+        <span class="original-price">₹4,999</span>
+        <span class="discount">64% off</span>
+      </div>
+ 
+      <h5 class="section-heading">Description</h5>
+      <p class="full-description" [innerHTML]="product.description"></p>
+ 
+      <ul class="feature-list">
+        <li><span class="bullet-icon">🎧</span> With Mic: Yes</li>
+        <li><span class="bullet-icon">🔋</span> Battery life: 80 hr | Charging time: 2 Hours</li>
+        <li><span class="bullet-icon">📶</span> Bluetooth 5.4 with wide compatibility</li>
+        <li><span class="bullet-icon">📱</span> Multi-device pairing support</li>
+        <li><span class="bullet-icon">🎶</span> Deep bass with 40mm drivers</li>
+        <li><span class="bullet-icon">🛏️</span> Lightweight and comfortable fit</li>
+      </ul>
+    </div>
+ 
+  </div>
+</div>
+ 
+<footer class="cart-footer">
+  <div class="container text-center py-3">
+    <p>&copy; 2025 <strong>ShopBold</strong>. All rights reserved.</p>
+    <small>Secure payments | Fast delivery | Easy returns</small>
+  </div>
+</footer>
+ 

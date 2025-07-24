@@ -1,0 +1,66 @@
+<header class="header">
+  <div class="logo" style="cursor: pointer;" (click)="goToHome()">ShopBold</div>
+  <nav>
+    <!-- Furniture Dropdown -->
+    <div class="nav-link dropdown"
+             (mouseenter)="showFurnitureDropdown = true"
+             (mouseleave)="showFurnitureDropdown = false">
+    <span style="cursor: pointer;" (click)="filterFurniture('all')">Furniture  <i class="fas fa-caret-down"></i></span> <!-- ✅ Show all furniture on click -->
+    <div class="dropdown-menu" *ngIf="showFurnitureDropdown">
+    <a class="dropdown-item" (click)="filterFurniture('chair')">Chairs</a>
+    <a class="dropdown-item" (click)="filterFurniture('sofa')">Sofas</a>
+    <a class="dropdown-item" (click)="filterFurniture('wardrobe')">Wardrobes</a>
+    <a class="dropdown-item" (click)="filterFurniture('all')">All</a>
+    </div>
+    </div>
+     
+        <!-- Electronics Dropdown -->
+    <div class="nav-link dropdown"
+             (mouseenter)="showDropdown = true"
+             (mouseleave)="showDropdown = false">
+    <span style="cursor: pointer;" (click)="filterElectronics('all')">Electronics  <i class="fas fa-caret-down"></i></span> <!-- ✅ Show all electronics on click -->
+    <div class="dropdown-menu" *ngIf="showDropdown">
+    <a class="dropdown-item" (click)="filterElectronics('headphones')">Headphones</a>
+    <a class="dropdown-item" (click)="filterElectronics('phone')">Phones</a>
+    <a class="dropdown-item" (click)="filterElectronics('tv')">TVs</a>
+    <a class="dropdown-item" (click)="filterElectronics('all')">All</a>
+    </div>
+    </div>
+    </nav>
+ 
+  <!-- <nav>
+    <a (click)="gotofurniture()" routerLink="/furniture" class="nav-link">Furniture</a>
+    <a (click)="goToElectronics()" routerLink="/electronics" class="nav-link">Electronics</a>
+  </nav> -->
+ 
+  <div class="search-bar">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+  </div>
+ 
+  <form class="form-inline" id="form1">
+    <button id="submit" type="submit" class="btn btn-default">
+      <i class="fa fa-search"></i>
+    </button>
+  </form>
+ 
+  <form class="form-inline" id="form1">
+    <button (click)="goToCart()" class="btn btn-default">
+      <i class="fa-solid fa-cart-shopping"></i>
+    </button>
+  </form>
+ 
+  <nav>
+    <ng-container *ngIf="isLoggedIn; else showSignup">
+      <span class="user-info">
+      <i class="fa fa-user"></i>
+      <span class="username me-2">{{ username }}</span>
+      </span>
+
+
+      <button (click)="logout()">Logout</button>
+    </ng-container>
+    <ng-template #showSignup>
+      <button (click)="goToSignup()">Sign Up</button>
+    </ng-template>
+  </nav>
+</header>

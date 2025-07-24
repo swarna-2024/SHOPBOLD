@@ -1,0 +1,45 @@
+<section class="hero">
+  <h1>Welcome to ShopBold</h1>
+  <p>Your one-stop shop for everything!</p>
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="ShoesBanner.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="image(4).jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="image(5).png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+<section class="products">
+  <h2>Featured Products</h2>
+  <div class="product-grid">
+    <div class="product-card" *ngFor="let product of products">
+      <h3>{{ product.name }}</h3>
+      <p>\${{ product.price }}</p>
+
+      <div class="card">
+        <img src="ShoesBanner.jpg" class="card-img-top" alt="Loading...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

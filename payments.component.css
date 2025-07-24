@@ -1,0 +1,134 @@
+/* Page Background */
+body {
+  background-color: #fff0f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.payment-container {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f8bbd0;
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  font-weight: 600;
+  color: #d81b60;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+h3 {
+  margin-top: 30px;
+  color: #ad1457;
+  font-size: 1.2rem;
+}
+
+/* Payment Method */
+.payment-method {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.payment-method label {
+  font-weight: 500;
+  color: #6a1b9a;
+}
+
+/* Form Labels */
+.card-details label,
+.delivery-details label {
+  font-weight: 500;
+  color: #4e4e4e;
+}
+
+/* Inputs */
+.card-details input,
+.delivery-details input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-details input:focus,
+.delivery-details input:focus {
+  border-color: #ec407a;
+  box-shadow: 0 0 0 3px rgba(236, 64, 122, 0.2);
+  outline: none;
+}
+
+/* Error Messages */
+.error {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+/* Button */
+button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background-color: #ec407a;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d81b60;
+}
+
+button:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+/* Icon and Label Horizontal Alignment */
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.input-group i {
+  font-size: 1rem;
+  color: #555;
+}
+
+.input-group label {
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .payment-container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}

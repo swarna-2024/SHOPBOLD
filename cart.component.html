@@ -1,0 +1,55 @@
+<app-header></app-header> 
+
+<header class="cart-header text-center">
+    <div class="container py-3">
+      <h2 class="logo">Welcome to ShopBold Cart</h2>
+    </div>
+  </header>
+ 
+ 
+  <div class="container mt-4 mb-5">
+    <div class="card p-4 shadow-sm">
+      <h4 class="mb-3">Your Shopping Cart</h4>
+      <hr>
+      <table class="table table-bordered" *ngIf="cartItems.length > 0">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total Amount</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of cartItems; let i = index">
+            <td>
+              <img [src]="item.image" alt="{{ item.name }}" class="cart-product-image">
+            </td>
+            <td>{{ item.name }}</td>
+            <td>₹{{ item.price }}</td>
+            <td>
+              <div class="d-flex align-items-center">
+                <button class="btn btn-sm btn-outline-secondary me-2" (click)="decreaseQuantity(i)">−</button>
+                {{ item.quantity }}
+                <button class="btn btn-sm btn-outline-secondary ms-2" (click)="increaseQuantity(i)">+</button>
+              </div>
+            </td>
+            <td>₹{{ item.price * item.quantity }}</td>
+            <td>
+              <button class="btn btn-sm btn-danger" (click)="removeItem(i)">Remove</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+ 
+      <div *ngIf="cartItems.length === 0">
+        <p>No items in cart.</p>
+      </div>
+ 
+      <hr>
+      <h4 class="text-end grand-total">Grand Total: ₹{{ getTotal() }}</h4>
+      <button class="btn btn-success btn-lg w-100 mt-3" (click)="goToPayment()">Checkout & Pay</button>
+    </div>
+  </div>

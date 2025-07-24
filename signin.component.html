@@ -1,0 +1,31 @@
+<app-header></app-header> 
+
+<div class="signin-container">
+  <div class="left-panel">
+    <img src="ShopBold Logo.png" alt="Shop Bold Logo" class="logo" />
+  </div>
+
+  <div class="right-panel">
+    <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+      <h2>Login</h2>
+
+      
+      <input type="text" formControlName="emailOrMobile" placeholder="Email or Mobile Number" />
+      <div *ngIf="submitted && f['emailOrMobile'].errors?.['required']" class="error">Required field</div>
+      <div *ngIf="submitted && f['emailOrMobile'].errors?.['pattern']" class="error">Enter a valid email or 10-digit mobile number.</div>
+
+      
+      <input type="password" formControlName="password" placeholder="Password" />
+      <div *ngIf="submitted && f['password'].errors?.['required']" class="error">Required field</div>
+      <div *ngIf="submitted && f['password'].errors?.['minlength']" class="error">Password must be at least 6 characters.</div>
+
+      
+      <div *ngIf="loginError" class="error">{{ loginError }}</div>
+
+      
+      <button type="submit" [disabled]="signinForm.invalid">Login</button>
+
+      
+    </form>
+  </div>
+</div>

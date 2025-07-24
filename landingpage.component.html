@@ -1,0 +1,99 @@
+<app-header></app-header>
+<section class="hero">
+
+  <h1 class="h1">Welcome to ShopBold</h1>
+  <p class="p">Your one-stop shop for everything!</p>
+
+ <!----> <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="ShoesBanner.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="image(4).jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="image(5).png" class="d-block w-100" alt="...">
+    </div>
+    
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+</div>
+</section>  
+
+<section class="products">
+  <h2>Featured Products</h2>
+  <div class="product-grid">
+    <div class="product-card" *ngFor="let product of products">
+      <h4>{{ product.name }}</h4>
+      <p>\${{ product.price }}</p>
+
+ <div class="card">
+  <img [src]="product.image" class="card-img-top" alt="Loading...">
+  <div class="card-body">
+    <p class="description">{{product.description}}</p>
+    <a href="#"></a>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!--<section>
+<div class="carousel-container">
+  <h2>Featured Products</h2>
+  <div class="carousel">
+    <div class="card" *ngFor="let pro of product">
+      <div class="card-body">
+        <h3>{{ pro.name }}</h3>x
+        <p>{{ pro.description }}</p>
+        <strong>₹{{ pro.price }}</strong>
+
+        
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+</section>-->
+
+<section class="container my-5">
+  <div class="carousel-container">
+    <h2 class="mb-4 text-start">
+      Up to 60% off | Best offers on furniture products
+      <span class="launchpad"></span>
+      <a href="#" class="text-decoration-none ms-2">See all</a>
+    </h2>
+
+    <div class="carousel-wrapper d-flex align-items-center">
+      <button class="nav left btn btn-outline-secondary me-2" (click)="prev()">&lt;</button>
+
+      <div class="carousel-track d-flex overflow-hidden" #carouselTrack>
+        <div class="carousel-card me-3" *ngFor="let pro of product">
+          <div class="card h-100">
+            <img [src]="pro.image" class="card-img-top" alt="{{ pro.name }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ pro.name }}</h5>
+              <p class="card-text">{{ pro.description }}</p>
+              <strong>₹{{ pro.price }}</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="nav right btn btn-outline-secondary ms-2" (click)="next()">&gt;</button>
+    </div>
+  </div>
+</section>
