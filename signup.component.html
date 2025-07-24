@@ -1,0 +1,61 @@
+<app-header></app-header> 
+
+<div class="signup-wrapper">
+  <div class="left-panel">
+    <img src="cart.png" alt="Signup Illustration" />
+    <h2>Start for free and get attractive offers.</h2>
+  </div>
+
+  <div class="right-panel">
+    <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+      <h2>Sign Up</h2>
+
+      <input type="text" formControlName="name" placeholder="Name" />
+      <div *ngIf="submitted && signupForm.get('name')?.errors?.['required']" class="error">Name is required.</div>
+      <div *ngIf="submitted && signupForm.get('name')?.errors?.['pattern']" class="error">Enter a valid name.</div>
+
+      <input type="email" formControlName="email" placeholder="Email" />
+      <div *ngIf="submitted && signupForm.get('email')?.errors?.['required']" class="error">Email is required.</div>
+      <div *ngIf="submitted && signupForm.get('email')?.errors?.['email']" class="error">Enter a valid email.</div>
+
+      <input type="text" formControlName="mobile" placeholder="Mobile Number" />
+      <div *ngIf="submitted && signupForm.get('mobile')?.errors?.['required']" class="error">Mobile number is required.</div>
+      <div *ngIf="submitted && signupForm.get('mobile')?.errors?.['pattern']" class="error">Enter a valid 10-digit mobile number.</div>
+
+      <input type="password" formControlName="password" placeholder="Password" />
+      <div *ngIf="submitted && signupForm.get('password')?.errors?.['required']" class="error">Password is required.</div>
+      <div *ngIf="submitted && signupForm.get('password')?.errors?.['pattern']" class="error">
+        Password must contain:
+        <ul>
+          <li>At least one uppercase letter</li>
+          <li>At least one lowercase letter</li>
+          <li>At least one digit</li>
+          <li>At least one special character (&#64;$!%*?&)</li>
+        </ul>
+      </div>
+
+      <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" />
+      <div *ngIf="submitted && signupForm.get('confirmPassword')?.errors?.['required']" class="error">Confirm password is required.</div>
+      <div *ngIf="submitted && signupForm.errors?.['passwordMismatch']" class="error">Passwords do not match.</div>
+
+      <div class="agreement-check">
+        <input type="checkbox" id="terms" formControlName="terms" />
+        <label for="terms" class="terms-of-use-text">
+          I agree to Platform's
+          <a href="#">Terms of Service</a> and
+          <a href="#">Privacy Policy</a>
+        </label>
+      </div>
+      <div *ngIf="submitted && signupForm.get('terms')?.errors?.['requiredTrue']" class="error">
+        You must agree to continue.
+      </div>
+
+      <button type="submit">Register</button>
+
+      <p>
+        Already have an account?
+        <a (click)="goToSignin()" routerLink="/signin" class="nav-link">Login</a>
+      </p>
+    </form>
+  </div>
+</div>

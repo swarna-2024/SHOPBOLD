@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+   
+  .auth-wrapper {
+    text-align: center;
+    padding: 20px;
+  }
+   
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2874f0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }

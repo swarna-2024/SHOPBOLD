@@ -1,0 +1,127 @@
+/* Wrapper for the entire signup layout */
+.signup-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-y: auto;
+}
+ 
+/* Left panel with image and caption */
+.left-panel {
+  flex: 1;
+  background-color: #f0f4f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+ 
+.left-panel img {
+  max-width: 80%;
+  height: auto;
+}
+ 
+/* Right panel with the form */
+.right-panel {
+  flex: 1;
+  background-color: #e6f2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+ 
+/* Form styling */
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+ 
+form h2 {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+ 
+/* Input fields */
+input[type="name"],
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  width: 94%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+ 
+/* Submit button */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-top: 20px;
+  cursor: pointer;
+}
+ 
+/* Error messages */
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+ 
+ 
+.agreement-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #88898a;
+  text-align: left;
+  width: 100%;
+}
+ 
+.agreement-check input[type="checkbox"] {
+  margin: 0;
+}
+ 
+.agreement-check .terms-of-use-text {
+  flex: 1;
+  white-space: normal;
+}
+ 
+.agreement-check .terms-of-use-text a {
+  color: #ff5722;
+  text-decoration: none;
+}
+ 
+form p {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.nav-link{
+color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}

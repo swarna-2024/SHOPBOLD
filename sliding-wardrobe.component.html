@@ -1,0 +1,44 @@
+<app-header></app-header>
+<div class="container mt-5 mb-5">
+  <div class="product-detail-card d-flex flex-wrap align-items-start">
+    <div class="image-section text-center">
+      <img [src]="product.image" alt="Sliding Wardrobe" class="product-image mb-3">
+ 
+      <p *ngIf="currentQuantity > 0" class="text-success">
+        Already in cart: {{ currentQuantity }} item(s)
+      </p>
+ 
+      <button class="btn btn-primary btn-lg add-to-cart-btn" (click)="addToCart()">Add to Cart</button>
+    </div>
+ 
+    <div class="description-section">
+      <h2 class="product-title">{{ product.name }}</h2>
+      <p class="rating">★★★★☆ <span class="rating-text">(4.7 | 10,450 Ratings & 2,789 Reviews)</span></p>
+ 
+      <div class="price-section">
+        <span class="current-price">₹{{ product.price }}</span>
+        <span class="original-price">₹17,999</span>
+        <span class="discount">33% off</span>
+      </div>
+ 
+      <h5 class="section-heading">Description</h5>
+      <p class="full-description">{{ product.description }}</p>
+ 
+      <ul class="feature-list">
+        <li><span class="bullet-icon">🚪</span> Dual sliding doors for compact access</li>
+        <li><span class="bullet-icon">🧥</span> Multiple hanging sections with hanger rods</li>
+        <li><span class="bullet-icon">📦</span> Built-in drawers and shoe racks</li>
+        <li><span class="bullet-icon">🪵</span> Premium engineered wood construction</li>
+        <li><span class="bullet-icon">🎨</span> Matte walnut finish with metal trim</li>
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+<footer class="cart-footer">
+  <div class="container text-center py-3">
+    <p>&copy; 2025 <strong>ShopBold</strong>. All rights reserved.</p>
+    <small>Secure payments | Fast delivery | Easy returns</small>
+  </div>
+</footer>
+ 

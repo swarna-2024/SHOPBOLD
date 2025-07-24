@@ -1,0 +1,186 @@
+{
+  "orders": [
+    {
+      "id": "161c",
+      "cart": [
+        {
+          "id": 1,
+          "name": "Wireless Headphones",
+          "description": "\n      <p>Experience immersive sound with our premium Wireless Headphones. Designed for comfort and performance, these headphones feature:</p>\n      <ul>\n        <li><strong>40mm Bass Boosted Drivers:</strong> Deep, powerful bass with precision-tuned audio.</li>\n        <li><strong>ENC for Noise-Free Calling:</strong> Filters background noise for crystal-clear voice calls.</li>\n        <li><strong>Bluetooth 5.4 with EDR:</strong> Fast pairing and stable wireless performance.</li>\n        <li><strong>80H Battery Life:</strong> Enjoy uninterrupted music for days.</li>\n        <li><strong>Fast Charging:</strong> 10 minutes charge gives 7 hours playback.</li>\n        <li><strong>Comfort Fit:</strong> Soft ear cushions and adjustable headband for all-day wear.</li>\n      </ul>\n    ",
+          "price": 2499,
+          "image": "/HeadPhones.png",
+          "quantity": 1
+        }
+      ],
+      "total": 2499,
+      "paymentMethod": "card",
+      "cardDetails": {
+        "cardNumber": "5765 7676 8745 6345",
+        "cardHolder": "vintiha",
+        "expiryDate": "12/25",
+        "cvv": "456"
+      },
+      "delivery": {
+        "fullName": "lasdkjf l;aksdjf",
+        "email": "yrghur@gmail.com",
+        "phone": "07234567891",
+        "street": "H.no: 1-25-75, Subash nagar colony",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "postalCode": "500015"
+      }
+    },
+    {
+      "id": "31d3",
+      "cart": [
+        {
+          "id": 1,
+          "name": "Wireless Headphones",
+          "description": "\n      <p>Experience immersive sound with our premium Wireless Headphones. Designed for comfort and performance, these headphones feature:</p>\n      <ul>\n        <li><strong>40mm Bass Boosted Drivers:</strong> Deep, powerful bass with precision-tuned audio.</li>\n        <li><strong>ENC for Noise-Free Calling:</strong> Filters background noise for crystal-clear voice calls.</li>\n        <li><strong>Bluetooth 5.4 with EDR:</strong> Fast pairing and stable wireless performance.</li>\n        <li><strong>80H Battery Life:</strong> Enjoy uninterrupted music for days.</li>\n        <li><strong>Fast Charging:</strong> 10 minutes charge gives 7 hours playback.</li>\n        <li><strong>Comfort Fit:</strong> Soft ear cushions and adjustable headband for all-day wear.</li>\n      </ul>\n    ",
+          "price": 2499,
+          "image": "/HeadPhones.png",
+          "quantity": 1
+        }
+      ],
+      "total": 2499,
+      "paymentMethod": "card",
+      "cardDetails": {
+        "cardNumber": "4565 7676 8786 7876",
+        "cardHolder": "gbgbgf",
+        "expiryDate": "12/23",
+        "cvv": "343"
+      },
+      "delivery": {
+        "fullName": "Bhagyashree",
+        "email": "laksdjf@gmail.com",
+        "phone": "07234567891",
+        "street": "kmjhkm",
+        "city": "ukujyu",
+        "state": "jyktfuy",
+        "postalCode": "456467"
+      }
+    },
+    {
+      "id": "38e6",
+      "cart": [
+        {
+          "id": 1,
+          "name": "Wireless Headphones",
+          "description": "\n      <p>Experience immersive sound with our premium Wireless Headphones. Designed for comfort and performance, these headphones feature:</p>\n      <ul>\n        <li><strong>40mm Bass Boosted Drivers:</strong> Deep, powerful bass with precision-tuned audio.</li>\n        <li><strong>ENC for Noise-Free Calling:</strong> Filters background noise for crystal-clear voice calls.</li>\n        <li><strong>Bluetooth 5.4 with EDR:</strong> Fast pairing and stable wireless performance.</li>\n        <li><strong>80H Battery Life:</strong> Enjoy uninterrupted music for days.</li>\n        <li><strong>Fast Charging:</strong> 10 minutes charge gives 7 hours playback.</li>\n        <li><strong>Comfort Fit:</strong> Soft ear cushions and adjustable headband for all-day wear.</li>\n      </ul>\n    ",
+          "price": 2499,
+          "image": "/HeadPhones.png",
+          "quantity": 1
+        }
+      ],
+      "total": 2499,
+      "paymentMethod": "card",
+      "cardDetails": {
+        "cardNumber": "4365 4765 8798 7978",
+        "cardHolder": "bhgsfbhdfbh",
+        "expiryDate": "01/34",
+        "cvv": "456"
+      },
+      "delivery": {
+        "fullName": "lasdkjf l;aksdjf",
+        "email": "vinitha@gmail.com",
+        "phone": "7234567867",
+        "street": "H.no: 1-25-75, Subash nagar colony",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "postalCode": "500067"
+      }
+    },
+    {
+      "id": "34ad",
+      "cart": [
+        {
+          "id": 1,
+          "name": "Wireless Headphones",
+          "description": "\n      <p>Experience immersive sound with our premium Wireless Headphones. Designed for comfort and performance, these headphones feature:</p>\n      <ul>\n        <li><strong>40mm Bass Boosted Drivers:</strong> Deep, powerful bass with precision-tuned audio.</li>\n        <li><strong>ENC for Noise-Free Calling:</strong> Filters background noise for crystal-clear voice calls.</li>\n        <li><strong>Bluetooth 5.4 with EDR:</strong> Fast pairing and stable wireless performance.</li>\n        <li><strong>80H Battery Life:</strong> Enjoy uninterrupted music for days.</li>\n        <li><strong>Fast Charging:</strong> 10 minutes charge gives 7 hours playback.</li>\n        <li><strong>Comfort Fit:</strong> Soft ear cushions and adjustable headband for all-day wear.</li>\n      </ul>\n    ",
+          "price": 2499,
+          "image": "/HeadPhones.png",
+          "quantity": 2
+        }
+      ],
+      "total": 4998,
+      "paymentMethod": "cod",
+      "cardDetails": null,
+      "delivery": {
+        "fullName": "lasdkjf l;aksdjf",
+        "email": "vinitha@gmail.com",
+        "phone": "7234567867",
+        "street": "H.no: 1-25-75, Subash nagar colony",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "postalCode": "500067"
+      }
+    },
+    {
+      "id": "bd07",
+      "cart": [
+        {
+          "id": 4,
+          "name": "Sony Bravia 55\" 4K Ultra HD Smart TV",
+          "description": "\n      Experience cinematic visuals with Sony’s Bravia 4K TV. Enjoy stunning clarity, Dolby Audio, voice assistant integration, and smart streaming all in one elegant frame.\n    ",
+          "price": 62000,
+          "image": "/SonyTV.png",
+          "quantity": 1
+        }
+      ],
+      "total": 62000,
+      "paymentMethod": "card",
+      "cardDetails": {
+        "cardNumber": "1234 5678 9876 7654",
+        "cardHolder": "supriya",
+        "expiryDate": "12/87",
+        "cvv": "543"
+      },
+      "delivery": {
+        "fullName": "supriya",
+        "email": "supriya@gmail.com",
+        "phone": "9515831560",
+        "street": "H.no: 1-25-75, Subash nagar colony",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "postalCode": "532436"
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": "62f9",
+      "name": "supriya",
+      "email": "supriya@gmail.com",
+      "mobile": "9515831560",
+      "password": "Supriya@123"
+    },
+    {
+      "id": "1d76",
+      "name": "vinitha",
+      "email": "vinitha@gmail.com",
+      "mobile": "9876543456",
+      "password": "Vinitha@123"
+    },
+    {
+      "id": "9904",
+      "name": "Aryanshi",
+      "email": "aryanshi@gmail.com",
+      "mobile": "7234567891",
+      "password": "Aryanshi@123"
+    },
+    {
+      "id": "5397",
+      "name": "Bhagyashree",
+      "email": "bhagyashree@gmail.com",
+      "mobile": "7896564332",
+      "password": "Bhagyashree@123"
+    },
+    {
+      "id": "efa8",
+      "name": "Shakina",
+      "email": "shakina@gmail.com",
+      "mobile": "7865456798",
+      "password": "Shakina@123"
+    }
+  ]
+}
